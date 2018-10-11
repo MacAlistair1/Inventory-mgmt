@@ -18,13 +18,15 @@ class CreateSalesTable extends Migration
             $table->timestamp('sales_date');
             $table->string('product_name');
             $table->float('product_rate');
+            $table->integer('product_id')->unsigned()->index();
+            $table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('sales_quantity');
             $table->float('sales_amount');
             $table->float('paid_amount');
             $table->float('due_amount');
-            $table->string('customer_name');
-            $table->string('customer_address');
-            $table->string('customer_contact');
+            $table->string('customer_name')->nullable();
+            $table->string('customer_address')->nullable();
+            $table->string('customer_contact')->nullable();
             $table->timestamps();
         });
     }

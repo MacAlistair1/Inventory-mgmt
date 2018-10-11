@@ -29,6 +29,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/product">View Product Stock</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
                 </ul>
             </div>
         </div>

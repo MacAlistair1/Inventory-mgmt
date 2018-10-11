@@ -38,7 +38,8 @@ class SalesController extends Controller
             'product_name' => 'required',
             'sales_rate' => 'required',
             'sales_quantity' => 'required',
-            'paid_amount' => 'required'
+            'paid_amount' => 'required',
+            'customer_contact' => 'max:13|min:10'
         ]);
 
         $total_amt = (($request->input('sales_rate'))*($request->input('sales_quantity')));

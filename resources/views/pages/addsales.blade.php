@@ -30,7 +30,7 @@
     </div>
     <div class="form-group">
             {{ Form::label('customer_contact', 'Customer Contact') }}
-            {{ Form::text('customer_contact', '', ['class' => 'form-control', 'placeholder' => 'Customer Contact']) }}
+            {{ Form::number('customer_contact', '', ['class' => 'form-control', 'placeholder' => 'Customer Contact']) }}
     </div>
     {{ Form::submit('Submit', ['class' => 'btn btn-primary']) }}   
 

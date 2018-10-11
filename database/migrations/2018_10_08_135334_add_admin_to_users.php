@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddProductIdToSales extends Migration
+class AddAdminToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddProductIdToSales extends Migration
      */
     public function up()
     {
-        Schema::table('sales', function($table){
-               $table->integer('product_id');
+        Schema::table('users', function($table){
+            $table->enum('is_admin', ['0', '1'])->default('0');
         });
     }
 
@@ -25,8 +25,8 @@ class AddProductIdToSales extends Migration
      */
     public function down()
     {
-        Schema::table('sales', function($table){
-            $table->dropColumn('product_id');
-     });
+        Schema::table('users', function($table){
+            $table->dropColumn('is_admin');
+        });
     }
 }
